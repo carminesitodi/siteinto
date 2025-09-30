@@ -1,17 +1,27 @@
 ---
-
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1> my Astro</h1>
-		<a href="/about"> clicca</a>"
-	</body>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pagina con Footer</title>
+    <link rel="stylesheet" href="../public/styles.css" />
+  </head>
+  <body>
+    <h1>Contenuto principale della pagina</h1>
+
+    <!-- altri contenuti... -->
+
+    <!-- Footer sempre in fondo -->
+    <Footer
+      logoSrc="/logo.png"
+      altText="Torneo di Calcio"
+      contacts={["Email: intostreet.com", "Telefono: +39 333 1234567", "Centro sportivo Fiamme Oro"]}
+      socials={[
+        { name: "Instagram", url: "https://instagram.com" },
+        { name: "Facebook", url: "https://facebook.com" }
+      ]}
+    />
+  </body>
 </html>

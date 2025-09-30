@@ -1,0 +1,33 @@
+---
+const { logoSrc, altText, contacts = [], socials = [] } = Astro.props;
+---
+
+<footer>
+  <div>
+    <!-- Contatti -->
+    <h3>Contatti</h3>
+    {contacts.map((c) => (
+      <p>{c}</p>
+    ))}
+  </div>
+
+  <div>
+    <!-- Logo e nome -->
+    {logoSrc && <img src={logoSrc} alt={altText ?? "Logo"} />}
+    <h2>{altText}</h2>
+  </div>
+
+  <div>
+    <!-- Social -->
+    <h3>Seguici</h3>
+    <ul>
+      {socials.map((s) => (
+        <li>
+          <a href={s.url} target="_blank" rel="noopener noreferrer">
+            {s.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>

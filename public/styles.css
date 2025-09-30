@@ -1,0 +1,70 @@
+footer {
+  background-color: #000;      /* Rettangolo nero */
+  color: #fff;                 /* Testo bianco */
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between; /* Divide lo spazio tra le 3 colonne */
+  align-items: center;
+  position: relative;           /* resta in basso se vuoi */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Le 3 colonne */
+footer > div {
+  flex: 1;                      /* Ogni colonna prende lo stesso spazio */
+  text-align: center;           /* Centra testo e logo, modificabile */
+}
+
+/* Colonna sinistra (Contatti) */
+footer > div:first-child {
+  text-align: left;
+}
+
+/* Colonna centrale (Logo + Nome) */
+footer > div:nth-child(2) {
+  text-align: center;
+}
+
+/* Colonna destra (Social) */
+footer > div:last-child {
+  text-align: right;
+}
+
+/* Logo centrale */
+footer img {
+  max-height: 50px; /* Altezza massima del logo */
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* Lista social */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin: 0.25rem 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* fa crescere il contenuto principale, spingendo il footer in basso */
+}
